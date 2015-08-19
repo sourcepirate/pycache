@@ -9,12 +9,12 @@ def Readme():
 setup(
     name='pycache',
     packages=['pycache'],
-    version='0.5',
-    description='Pythonic way of Caching Computations',
+    version='0.1',
+    description='Pythonic way of Caching Computations(LRU caching module)',
     long_description = Readme(),
     author='plasmashadow',
     author_email='plasmashadowx@gmail.com',
-    url='https://github.com/plasmashadow/pyhttp.git',
+    url='https://github.com/plasmashadow/pycache.git',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
