@@ -16,8 +16,10 @@ class TestCache(unittest.TestCase):
         def add(x,y):
             return x+y
 
-        print cache
-        add(2,3)
-        print cache
 
-        self.assertEqual(1,1)
+        add(2,3)
+        add(4,5)
+
+        items = map(lambda x: x.value, cache.lru)
+
+        self.assertEqual(items, [5, 9])

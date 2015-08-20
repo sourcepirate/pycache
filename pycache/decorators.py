@@ -33,24 +33,6 @@ def cached(cache, kernal=default_decorator):
 
     return decorator
 
-def synchronized(func):
-
-    '''
-
-      This method is used for locking the current critical section
-      method to a  particular shared point.
-
-    '''
-
-    def inner(self, *args, **kwargs):
-
-        self.lock.acquire()
-        try:
-            return func(*args, **kwargs)
-        finally:
-            self.lock.release()
-
-    return inner
 
 
 def verbose(func):
@@ -68,3 +50,24 @@ def verbose(func):
         return res
 
     return verbose_func
+
+
+def synchronized(func):
+
+    '''
+
+      This method is used for locking the current critical section
+      method to a  particular shared point.
+
+    '''
+
+    def inner(self, *args, **kwargs):
+
+        self.lock.acquire()
+        try:
+            return func(self, *args, **kwargs)
+        finally:
+            self.lock.release()
+
+    return inner
+

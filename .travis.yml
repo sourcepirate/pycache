@@ -6,5 +6,12 @@ python:
 - '3.3'
 install:
 - pip install six
-
 script: nosetests
+deploy:
+  provider: pypi
+  user: plasmashadow
+  password:
+    secure: EoP0XfYRSycSpABrHFud+g4KpH/t8simUQT0noJZ1BrKKxFriqKo5c8PlhYcMR2BK4iNdJQyKWNk0Lw4e+dXzo1+3/ILG7rKCc8I5GIDbOZo8yl2R8o5bkqSnd/aUgoWXCmGsyeCQvmiTLbn4pzEbanOicLg8ULIeMCnfnbFKSrdYiPxoN9VYyJf1itvpFB4wEVdMGr9RETbigS4p0p91h38YiM12+DS3cKvHGh9HeB5t2w1VORp5MZjDpO7wSwKfwW9JaUwrxP2r9+NJob+56S1l48PdtY/mgIWV0VRHbCTiIfLgrlElAQCCBaAclSK9B+jJygGgk8nIOXSYhAfU059RPJ0DMNAX1JB+/GWXhEtGnvAwKla2uuSTyrm8p/4/CCJd8TvhQ6p/mnXwKGTM+fBAeDhy4AfrLksGr4PtBuYF1uCxLwukUB7turHG+pa157PIiFiu0wle30bg+dNJ8lTMYxtb7PfjCodIFgTgB8gt/8z0wvsckGhLoxqPiAF8IgJHhKE0MVNhNYWPqinELiyY4uY9jkZhMo0u7YXhua5k5dzo9vgAox6KaddouJQLMtEbJC+1Sfnh0KU920nxLxh+2GsARcDUgcDIvIhh65kIk9vgdAdBmBpYEC5gUkEI2r/h6HEVaD/5gieFwPwTizNfuPWcgKAK2TIc8noBMg=
+  on:
+    repo: plasmashadow/pycache
+    branch: master

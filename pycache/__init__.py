@@ -24,7 +24,7 @@ class CacheNode(object):
         return repr((self.key, self.value))
 
     def __hash__(self):
-        return hash(self)
+        return hash(str(self))
 
     def __cmp__(self, other):
         return cmp(str(self), str(other))
@@ -43,7 +43,7 @@ class Cache(dict):
         self.level = 0
         self.default_fail = default_fail
 
-        self.lrc = IMStack()
+        self.lru = IMStack()
         self.lock = RLock()
 
     def _has_expired(self, value):
