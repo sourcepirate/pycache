@@ -79,7 +79,7 @@ class Cache(dict):
         key = str(key)
         if not self.values.has_key(key):
             if fail:
-                raise KeyError, key
+                raise KeyError(key)
             return onmissing
 
         value = self.values[key]
