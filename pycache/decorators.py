@@ -20,8 +20,9 @@ def cached(cache, kernal=default_decorator):
       available.
     '''
 
-    @wraps(func)
+
     def decorator(func):
+
 
         def inner(*args, **kwargs):
 
