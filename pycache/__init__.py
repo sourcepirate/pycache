@@ -87,7 +87,7 @@ class Cache(dict):
         if self._has_expired(value):
             self.remove(key)
             if fail:
-                raise KeyError, key
+                raise KeyError(key)
             return onmissing
         self.lru.update(key)
         return value.value
