@@ -21,5 +21,6 @@ class TestCache(unittest.TestCase):
         add(4,5)
 
         items = map(lambda x: x.value, cache.lru)
+        items = list(items)
 
         self.assertEqual(items, [5, 9])
