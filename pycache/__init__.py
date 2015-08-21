@@ -77,7 +77,7 @@ class Cache(dict):
             fail = self.default_fail
 
         key = str(key)
-        if not self.values.has_key(key):
+        if key not in six.iterkeys(self.values):
             if fail:
                 raise KeyError(key)
             return onmissing
@@ -193,5 +193,5 @@ class Cache(dict):
         '''
         Do we have such key ?
         '''
-        return self.values.has_key(key)
+        return key in six.iterkeys(self.values)
     __contains__ = has_key
