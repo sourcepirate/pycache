@@ -4,6 +4,7 @@
 Pycache is a LRU Implemented with Linked Stack.
 https://en.wikipedia.org/wiki/Cache_algorithms#LRU
 
+[![Build Status](https://travis-ci.org/plasmashadow/pycache.svg?branch=master)](https://travis-ci.org/plasmashadow/pycache)
 
 ###Installation:
 
@@ -21,7 +22,7 @@ python setup.py install
 You can use pycache as both object as well as a decorator
 
 
-```
+```python
 from pycache import cached
 from pycache import Cache
 
